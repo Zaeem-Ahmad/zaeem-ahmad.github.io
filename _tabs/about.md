@@ -3,8 +3,6 @@
 icon: fas fa-info-circle
 order: 4
 ---
-
-
 My name is Zaeem Ahmad, and I am starting studies in Electrical and Computer Engineering at the University of Toronto's Faculty of Applied Science and Engineering this fall. 
 
 ## A little bit about me
