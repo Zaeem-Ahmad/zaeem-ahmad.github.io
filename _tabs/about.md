@@ -1,8 +1,11 @@
 ---
-layout: about
-icon: fas fa-about
+# the default layout is 'page'
+icon: fas fa-info-circle
 order: 4
 ---
+
+> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+{: .prompt-tip }
 
 My name is Zaeem Ahmad, and I am starting studies in Electrical and Computer Engineering at the University of Toronto's Faculty of Applied Science and Engineering this fall. 
 
