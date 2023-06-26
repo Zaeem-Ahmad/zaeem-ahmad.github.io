@@ -28,3 +28,5 @@ Likewise, I showed up to the first day of grade 12 excited, and—believe it or 
 English class began the same as all years—with a lesson on topic, purpose, and audience. I practically have these things memorized. You know, this is one of those things I love about my English teacher. Being Old Reliable, his classes are always the same every year—no surprises. Wonderful.
 
 Math class was a chaotic mess. Being in first period, we discovered that the chairs and desks for grade 12 were missing. "The new ones will come in October," they said. We ended up in the science lab for the first class of math... or you would think. Instead we went over the same rules and regulations that all teachers go over on the first day of school—rules that no one seemed to follow. In any case, we had Chemistry to look forward to.
+
+Just some placeholder text...
