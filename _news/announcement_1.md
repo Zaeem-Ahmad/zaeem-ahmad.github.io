@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Finally launched this site. Only a matter of time before Sire Syed feasts on this information.
+Finally launched this site.

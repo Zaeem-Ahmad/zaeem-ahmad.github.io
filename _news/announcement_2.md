@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Added a JSON + PDF resume. Let Sire parse that information.
+Added a JSON + PDF resume.

@@ -6,7 +6,7 @@
     "email": "zaeem.ahmad785@gmail.com",
     "phone": "",
     "url": "https://zaeem-ahmad.github.io/",
-    "summary": "Trustworthy and hardworking engineering student with a substantial, growing list of personal and team projects in the fields of software, electronics, and data analysis. Aiming to leverage my work and volunteer experience, which portray my excellent work ethic, outstanding problem-solving skills, and superb team-working skills, to benefit my community and develop my leadership experience.",
+    "summary": "Trustworthy and competent engineering student with a substantial, growing list of personal and team projects in the fields of software, electronics, and data analysis. Aiming to leverage my work and volunteer experience, which portray my excellent work ethic, outstanding problem-solving skills, and superb team-working skills, to benefit my community and develop my leadership experience.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -33,9 +33,11 @@
       "endDate": "2027-04",
       "score": "",
       "courses": [
-        "Calculus I, II",
-        "Linear Algebra",
-        "Electrical and Computer Fundamentals",
+        "Engineering Strategies and Practice I, II",
+        "Calculus I, II, III",
+        "Linear Algebra, Advanced Engineering Mathematics",
+        "Computer Fundamentals (C), Programming Fundamentals (C++)",
+        "Electrical Fundamentals, Introductory Electronics",
         "Statics and Dynamics"
       ]
     }
