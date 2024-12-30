@@ -3,7 +3,7 @@ layout: distill
 title: MedTray
 description: Feb 17, 2024 — Feb 18, 2024
 img: assets/img/project2/card5.jpg
-importance: 2
+importance: 7
 category: extracurricular
 related_publications: false
 

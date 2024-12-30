@@ -3,7 +3,7 @@ layout: distill
 title: KrossKut Data Analysis
 description: Jul 13, 2024 — Sep 2, 2024
 img: assets/img/project7/proj.jpg
-importance: 7
+importance: 2
 category: extracurricular
 related_publications: false
 
@@ -11,11 +11,11 @@ authors:
   - name: Zaeem Ahmad
     url: 
     affiliations:
-      - name: University of Toronto
+      name: University of Toronto
   - name: Mohammad Mahrus bin Ashfaq
     url: 
     affiliations:
-      - name: University of Toronto
+      name: University of Toronto
 
 toc:
   - name: Introduction

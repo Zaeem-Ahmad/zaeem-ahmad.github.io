@@ -44,6 +44,20 @@
   ],
   "projects": [
     {
+      "name": "20, 000 Leagues Under the Sea",
+      "summary": "Developed a digital system for an underwater game on the DE1-SoC FPGA using Quartus Prime, with modular FSMs for game states and animations. Designed VGA graphics logic and created testbenches to verify collision detection, submarine bounding, and reset functionality, leveraging ModelSim and FPGA testing.",
+      "highlights": [
+        "Digital Systems Design",
+        "FPGA Programming",
+        "Finite State Machines (FSM)", 
+        "Verilog", 
+        "Debugging and ModelSim"
+      ],
+      "startDate": "2024-11-06",
+      "endDate": "2024-11-27",
+      "url": "https://zaeem-ahmad.github.io/projects/8_project/"
+    },
+    {
       "name": "KrossKut Data Analysis",
       "summary": "Collaborated on developing a data analysis platform for KrossKut, using MinIO, Dremio, and Superset to analyze and visualize client data, with a focus on big data processing, data lakehouses, and predictive modeling.",
       "highlights": [

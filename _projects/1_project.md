@@ -3,7 +3,7 @@ layout: distill
 title: Hart House Wayfinding
 description: Sep 6, 2023 — Dec 8, 2023
 img: assets/img/project1/harthousefull.jpg
-importance: 1
+importance: 8
 category: university
 related_publications: false
 

@@ -3,12 +3,16 @@ layout: distill
 title: Nightblade
 description: May 28, 2024 — Jun 5, 2024
 img: assets/img/project6/thum.jpg
-importance: 6
-category: extracurricular
+importance: 3
+category: featured
 related_publications: false
 
 authors:
   - name: Zaeem Ahmad
+    url: 
+    affiliations:
+      name: University of Toronto
+  - name: Uzair Nadeem
     url: 
     affiliations:
       name: University of Toronto

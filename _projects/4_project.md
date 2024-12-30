@@ -3,8 +3,8 @@ layout: distill
 title: Elemental
 description: May 16, 2024 — Jun 1, 2024
 img: assets/img/project4/elemental.png
-importance: 4
-category: extracurricular
+importance: 5
+category: featured
 related_publications: false
 
 authors:

@@ -3,12 +3,16 @@ layout: distill
 title: ECE Hardware Workshop
 description: May 25, 2024 — May 28, 2024
 img: assets/img/project5/thum.jpg
-importance: 5
+importance: 4
 category: extracurricular
 related_publications: false
 
 authors:
   - name: Zaeem Ahmad
+    url: 
+    affiliations:
+      name: University of Toronto
+  - name: Mohammad Mahrus bin Ashfaq
     url: 
     affiliations:
       name: University of Toronto

@@ -5,7 +5,7 @@ permalink: /projects/
 description: Is the jack of all trades, master of none, better than the master of one?
 nav: true
 nav_order: 3
-display_categories: [university, extracurricular]
+display_categories: [featured, extracurricular, university]
 horizontal: false
 ---
 
