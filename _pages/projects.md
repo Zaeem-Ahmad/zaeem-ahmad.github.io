@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Is the jack of all trades, master of none, better than the master of one?
+description: One this page, you'll find details about the project's I've worked on. They include images, diagrams, graphs etc. and some have video clips too. 
 nav: true
 nav_order: 3
 display_categories: [featured, extracurricular, university]
