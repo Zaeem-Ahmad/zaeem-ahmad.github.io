@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="description" content="One of my favourite projects: A processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions."/>
+
+
+
+<title>
+    
+    SimProcLator | Zaeem Ahmad
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/projects/proj9_simproclator/"/>
+
+<meta property="og:url" content="http://localhost:1313/projects/proj9_simproclator/">
+  <meta property="og:site_name" content="Zaeem Ahmad">
+  <meta property="og:title" content="SimProcLator">
+  <meta property="og:description" content="One of my favourite projects: A processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-04-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-07T00:00:00+00:00">
+    <meta property="article:tag" content="Featured">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.92c3bf7119b98cfdc79e93f36a451eb901d8bbbfed7d75814e6436cf6c9085dc.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="light">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Zaeem Ahmad</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/projects" >
+                /projects
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/notes" >
+                /notes
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/resume" >
+                /resume
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">~</a><span class="breadcrumbs-separator">/</span><a href="/projects/">Projects</a><span class="breadcrumbs-separator">/</span>
+        <a href="/projects/proj9_simproclator/">SimProcLator</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">SimProcLator</h1>
+        <p class="single-summary">One of my favourite projects: a processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions.</p>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="author">The Duo: Zaeem Ahmad, Uzair Nadeem </p>
+            
+            <p class="single-date">
+              <time datetime="2025-04-07T00:00:00&#43;00:00">7 Apr 2025</time>
+              &nbsp; · &nbsp;9 min read
+            </p>
+          </div>
+        </div>
+        
+    </header>
+      <aside class="toc">
+        <p><strong>Table of contents</strong></p>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#what-is-simproclator">What is SimProcLator?</a></li>
+    <li><a href="#how-to-operate-simproclator">How to Operate SimProcLator</a></li>
+    <li><a href="#simproclator-flowchart-and-block-diagram">SimProcLator Flowchart and Block Diagram</a></li>
+    <li><a href="#final-work-distribution">Final Work Distribution</a></li>
+  </ul>
+</nav>
+      </aside>
+    
+    <div class="single-content">
+      <h2 class="heading" id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
+<p>SimProcLator was the final project for Computer Organization (ECE243). In one sentence, this course taught us how computers operate. Building off from Digital Systems (ECE241), we learned computer organization from several abstraction levels: starting from assembly language level, then jumping up to C language level, before diving in to the digital design and operation of a simple processor. In essence, this was a course on embedded systems, because a large portion of the course was about software interacting with hardware and the real world using input/output devices.</p>
+<p>Personally, this course was one of my favourite ones in second year because it finally answered the big question of how a computer REALLY operates. The weeks dedicated to the digital design and operation of a simple processor were perhaps my favourite. My friend and lab partner also felt the same way. For this reason, we decided to make our final project about a simple processor and how it executes instructions. In the figure below, you can see the processor we learned in class, frankly called &ldquo;Simple Processor&rdquo;.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 861; --h: 409;">
+        <img loading="lazy" alt="img" src="/projects/proj9_simproclator/simproc.png" width="861" height="409">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Block diagram of the Simple Processor we learned about in ECE243. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>The Simple Processor is a tiny 8-bit processor with 4 registers, 256 bytes of memory, and 10 instructions. The digital design of this processor includes some key registers, such as the Program Counter (PC), Instruction Register (IR), and flag registers (N and Z bit). There is also an arithmetic logic unit (ALU), numerous multiplexers, and other more complex digital hardware such as memory and the register file (RF).</p>
+<h2 class="heading" id="what-is-simproclator">
+  What is SimProcLator?
+  <a class="anchor" href="#what-is-simproclator">#</a>
+</h2>
+<p>This project, named “SimProcLator”, is exactly what it sounds like: a simple processor simulator. The name was inspired by <a href="https://cpulator.01xz.net/">CPULator</a>, a computer system simulator that was used extensively in this course and project. SimProcLator lets the user select one of the three currently supported instructions:</p>
+<ul>
+<li><code>add Ra, Rb</code>: add contents of register Ra and Rb and store the result into register Ra.</li>
+<li><code>sub Ra, Rb</code>: subtract contents of register Ra and Rb and store the result into Ra.</li>
+<li><code>ori imm5</code>: bit-wise logical OR the contents of register R1 (set by convention) with imm5 constant and store the result in R1.</li>
+</ul>
+<p>For the <code>add</code> and <code>sub</code> instructions, SimProcLator prompts the user to select their registers <code>Ra</code> and <code>Rb</code> using the keyboard. Likewise for the <code>ori</code> instruction, the user can manually input a 5 digit binary constant <code>imm5</code>.</p>
+<p>Once the user inputs the information, SimProcLator moves on to an animated processor screen that shows step-by-step all the register enable-signals and MUX select bits required on each cycle of the instruction execution.</p>
+<p>![img](screens.png &ldquo;Some screenshots of SimProcLator running. On the left is the start screen, and on the right is a moment captured during SimProcLator&rsquo;s simulation of the &ldquo;add Ra, Rb&rdquo; instruction execution.&rdquo;)</p>
+<h2 class="heading" id="how-to-operate-simproclator">
+  How to Operate SimProcLator
+  <a class="anchor" href="#how-to-operate-simproclator">#</a>
+</h2>
+<p>Before operating SimProcLator, it helps to understand the context and hardware in which it is designed to run on. The University of Toronto FPGA labs have DE1-SoC boards, which contain a large FPGA chip. Using an Intel program called Monitor Program, a <strong>NIOS V processor</strong> (a type of RISC V processor) is instantiated on the FPGA, and the hardware on the DE1-SoC is used to create a <strong>NIOS V computer system</strong> (i.e., with memory, I/O devices etc.).</p>
+<p>To use the NIOS V processor, one must load instructions into memory. In this course, we learned to write these instructions in either NIOS V assembly language or C. SimProcLator is written in C (source code provided on GitHub), which a user loads into the NIOS V processor using the Monitor Program.</p>
+<p>Fortunately, you do not need a DE1-SoC to run SimProcLator because it can be run on <a href="https://cpulator.01xz.net/">CPULator</a>. Simply go to the website, hover over <strong>File</strong>, click on <strong>open</strong>, and choose the C file with the code. Then, press on <strong>Compile and Load</strong>. Once that is done (and you see the disassembly pane), click on <strong>Continue</strong> to run the program. You can provide keyboard input by sending letters through the <strong>PS/2 keyboard or mouse</strong> panel on the right (<strong>Devices</strong> pane; make sure to use &ldquo;IRQ 22&rdquo; since the NIOS V DE1-SoC has two PS/2 inputs).</p>
+<p>The login screen lets you select an instruction to execute using the keyboard. Click “a” key for <code>add Ra, Rb</code> instruction, “s” for <code>sub Ra, Rb</code> instruction, and “o” for <code>ori imm5</code> instruction.</p>
+<p>After that you will be greeted with a page to select registers for the add and sub instructions. Press the number on the keyboard corresponding to the register you want to select on the screen. For example, for Ra to be R3 press “3” or for Rb to be R2 press “6”. After register selection, press the “space bar”.</p>
+<p>For all instructions, you will see the instruction encoding page. For <code>add</code> and <code>sub</code> instructions encoding will be done automatically. For the <code>ori</code> instruction, you will have to input manually an imm5 value by clicking “0” and “1” on the keyboard. Once encoding is done, you can press “space bar” to go to the processor page.</p>
+<p>From here it will automatically go through the process of the instruction execution while also explaining what happens when in each clock cycle. You can press “space bar” to pause and continue anywhere in between this process.</p>
+<p>Once instruction is done executing, a DONE sign will be shown on screen. You can press “e” to go back to the main screen to select a different instruction, or press “r” to replay the same instruction.</p>
+<h2 class="heading" id="simproclator-flowchart-and-block-diagram">
+  SimProcLator Flowchart and Block Diagram
+  <a class="anchor" href="#simproclator-flowchart-and-block-diagram">#</a>
+</h2>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 852; --h: 1062;">
+        <img loading="lazy" alt="img" src="/projects/proj9_simproclator/flowchartv2.png" width="852" height="1062">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Program flowchart for SimProcLator </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>To understand how SimProcLator simulates the step-by-step execution of instructions, the above flowchart is quite handy. I named them to be rather self-explanatory, but for sake of completeness, here we go:</p>
+<ul>
+<li>Mainscreen: Welcome screen that lets user choose instruction to be executed by pressing one of <code>a</code>, <code>s</code>, and <code>o</code>.</li>
+<li><code>add</code>/<code>sub</code> instruction: Input screen for the add/sub instructions. Lets the user pick registers Ra and Rb (one of R0 to R3).</li>
+<li><code>ori</code> instruction: Input screen for the ori instruction. Closely tied with the ori encoded screen since this instruction requires an imm5 constant (SimProcLator needs to show the encoded instruction to let the user input the desired imm5 constant).</li>
+<li><code>add</code>/<code>sub</code>/<code>ori</code> encoded: Shows how the assembly language instruction is encoded into binary before being placed into memory.</li>
+<li>Processor (base): SimProcLator draws the base processor screen.</li>
+<li>Processor (cycle-by-cycle): Depending on the instruction the user selected, SimProcLator will &ldquo;animate&rdquo; the execution by highlighting in green the signals required during each clock cycle of instruction execution. It also highlights the important digital logic blocks in blue and red.</li>
+<li>Pause state: Halts the simulation when spacebar is pressed and resumes simulation when pressed again.</li>
+<li>Execution Complete: Indicates to the user that SimProcLator has simulated the execution of the instruction and allows either replay of the same instruction or return to Mainscreen.</li>
+</ul>
+<p>The flowchart describes the way SimProcLator operates in terms of program flow and control. To better understand how SimProcLator does this under the hood, let&rsquo;s take a look at the block diagram below.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1980; --h: 861;">
+        <img loading="lazy" alt="img" src="/projects/proj9_simproclator/blockdiagram.png" width="1980" height="861">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> A rather colourful block diagram for SimProcLator </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>We see four groups: the <strong>Input Group</strong>, the <strong>Interrupt Service Routines (ISR) Group</strong>, the <strong>Main Program Group</strong>, and the <strong>Output Group</strong>. It makes the most sense to describe the diagram by going through these four groups, but you can also appreciate the colour-coded blocks of purple, green, red, and blue. These will be mentioned at the end.</p>
+<p>The easiest two groups are the <strong>Input Group</strong> (top left) and the <strong>Output Group</strong> (right) because their names are self-explanatory. The only way SimProcLator accepts user input is through a keyboard, but there are quite a lot of output devices. SimProcLator makes use of a VGA module to display content on a monitor and uses an audio module to output sound through speakers. The monitor and speaker are connected to the DE1-SoC. The other two output devices—the LEDs and HEX displays—are used as testing/debugging aids and are already part of the DE1-SoC.</p>
+<p>The next group we look at is the <strong>Interrupt Service Routine (ISR) Group</strong>. Again, the name is self-evident; this group is the system&rsquo;s interrupt service handler. To make the system as responsive as possible in terms of keyboard input and timer output, we decided to use interrupt-based I/O synchronization instead of polling.</p>
+<p>A person pressing a key would trigger the keyboard ISR, within which a <em>keyboard input parser</em> would analyze the make/break codes to determine what letter was pressed and what the system should do (based on its current state). In certain states, such as <em><code>ori</code> encoded</em> or <em>Processor (cycle-by-cycle)</em>, animating the instruction execution simulation (that&rsquo;s a mouthful) makes use of a 1.5 second timer. This means that every 1.5 seconds, the internal timer on the FPGA triggers an interrupt, within which our one of two massive finite state machine (FSM) checks the current program state and determines what to animate.</p>
+<p>This could have been done with polling, but with the size and complexity of the program, we decided to implement interrupts (which took more work, was more worth it in terms of end result—our system was a lot more responsive).</p>
+<p>The largest group is, evidently, the <strong>Main Program Group</strong>, and it contains our other giant FSM. Looking at the middle of our block diagram above, we see three distinct colours: green, red, and blue. The green modules features the various &ldquo;plotters&rdquo; in our program, and their purpose are self-evident (i.e., shape plotter plots a shape—used for printing the processor etc.). The red modules feature the background screens at various stages of the program (i.e., mainscreen, add screen, end screen etc.). The blue modules control and write/draw on top of the red module screens.</p>
+<p>Everything above (this entire section, in fact), is rather a bit technical and in-depth, so don&rsquo;t worry if a lot of it doesn&rsquo;t make sense. I&rsquo;ve written it out for anyone interested in some inner-workings and overall architecture of SimProcLator.</p>
+<h2 class="heading" id="final-work-distribution">
+  Final Work Distribution
+  <a class="anchor" href="#final-work-distribution">#</a>
+</h2>
+<p>My partner for this project was Uzair Nadeem, who was also my partner for ECE241. It was such a wonderful experience working with him because he is very reliable, trustworthy, and always finds a way to get the job done in the most excellent way possible. Also similar to ECE241, we worked together very closely on this project. However, we each worked more on certain parts of the project than others, so the table below shows roughly what each person worked on/was responsible for.</p>
+
+<div class="table-outer">
+    <table>
+        <thead>
+            <tr>
+                <th>Zaeem Ahmad</th>
+                <th>Uzair Nadeem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Interrupts for PS/2 Keyboard and Interval Timer</td>
+                <td>VGA output (display)</td>
+            </tr>
+            <tr>
+                <td>Audio sample conversion and output</td>
+                <td>ori instruction execution (timer ISR)</td>
+            </tr>
+            <tr>
+                <td>Overall finite state machine</td>
+                <td>Designing all screens (mainscreen, input screens etc.)</td>
+            </tr>
+            <tr>
+                <td>add and sub instruction execution (timer ISR)</td>
+                <td>Plotting the processor and wires</td>
+            </tr>
+            <tr>
+                <td>add, sub, and ori instruction input + encoding</td>
+                <td>Animating the clock signal</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/projects/proj8_20kleagues/">
+                        20, 000 Leagues Under the Sea
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
+
+    
+    <p>© Copyright 2025 Zaeem Ahmad. Powered by
+        <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+  <link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  
+<script defer 
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

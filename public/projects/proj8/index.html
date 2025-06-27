@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="description" content="My good friend Uzair and I develop an arcade-style game implemented in hardware using FPGAs and Verilog. Those ~3 weeks were rather challenging to get through, but very satisfying!"/>
+
+
+
+<title>
+    
+    20, 000 Leagues Under the Sea | Zaeem Ahmad
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/projects/proj8/"/>
+
+<meta property="og:url" content="http://localhost:1313/projects/proj8/">
+  <meta property="og:site_name" content="Zaeem Ahmad">
+  <meta property="og:title" content="20, 000 Leagues Under the Sea">
+  <meta property="og:description" content="My good friend Uzair and I develop an arcade-style game implemented in hardware using FPGAs and Verilog. Those ~3 weeks were rather challenging to get through, but very satisfying!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-11-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-27T00:00:00+00:00">
+    <meta property="article:tag" content="Featured">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.92c3bf7119b98cfdc79e93f36a451eb901d8bbbfed7d75814e6436cf6c9085dc.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="light">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Zaeem Ahmad</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/projects" >
+                /projects
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/resume" >
+                /resume
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">~</a><span class="breadcrumbs-separator">/</span><a href="/projects/">Projects</a><span class="breadcrumbs-separator">/</span>
+        <a href="/projects/proj8/">20, 000 Leagues Under the Sea</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">20, 000 Leagues Under the Sea</h1>
+        <p class="single-summary">My good friend Uzair and I develop an arcade-style game implemented in hardware using FPGAs and Verilog. Those ~3 weeks were rather challenging to get through, but very satisfying!</p>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="author">The Epic Combo: Zaeem Ahmad, Uzair Nadeem </p>
+            
+            <p class="single-date">
+              <time datetime="2024-11-27T00:00:00&#43;00:00">27 Nov 2024</time>
+              &nbsp; · &nbsp;12 min read
+            </p>
+          </div>
+        </div>
+        
+    </header>
+    
+    <div class="single-content">
+      <h2 class="heading" id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
+<p>This project uses an FPGA board (The DE1-SoC Board) and a monitor to implement an arcade-style game called “20,000 Leagues Under the Sea”. The objective of the game is to avoid the obstacles (shark and jellyfish) for as long as possible. Hitting an obstacle will end the game.</p>
+<p>This project was inspired by one of the team member’s past projects. In Grade 11, Uzair Nadeem implemented a similar game using Java.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1722; --h: 608;">
+        <img loading="lazy" alt="img" src="/projects/proj8/uzair.png" width="1722" height="608">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Screenshot of Uzair Nadeem’s past project whose theme heavily inspired this project. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>The above screenshots are from Uzair&rsquo;s past project. What you see below are this project&rsquo;s main screen and death screen.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 8152; --h: 2952;">
+        <img loading="lazy" alt="img" src="/projects/proj8/screens.png" width="8152" height="2952">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Pictures of our project&rsquo;s graphics. Left: starting main screen. Right: ending death screen. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>The original plan was to record our final presentation (which includes a live demo), but we didn&rsquo;t end up recording that. What I have here instead is our little demo backup video. You can view it on <a href="https://youtu.be/ZvHXAo-glVk?si=ul_Q1MBmV4m4mS0K">YouTube at this link</a>. Sadly, it&rsquo;s a bit loud (because everyone was working in the lab) and doesn&rsquo;t include our faces, but at least it shows the project.</p>
+<h2 class="heading" id="high-level-block-diagram">
+  High-level Block Diagram
+  <a class="anchor" href="#high-level-block-diagram">#</a>
+</h2>
+<p>The diagram below shows the high-level block diagram, highlighting the inputs and outputs. The <code>OverallFSM</code> (the name of the main module for this project), takes in clock signals, key presses, and switch signals from DE1-SoC board, as well as <code>inout</code> pins from the PS2 keyboard. The main module outputs to the LEDR’s and HEX’s on the DE1-SoC board. The VGA module outputs to a monitor. It should be noted that &ldquo;FSM&rdquo; in this digital systems context is an abbreviation of &ldquo;finite state machine&rdquo;.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1195; --h: 921;">
+        <img loading="lazy" alt="img" src="/projects/proj8/highlevel.png" width="1195" height="921">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> High-level block diagram showing the inputs and outputs </figcaption>
+    </div>
+    
+</figure>
+</p>
+<h2 class="heading" id="submodule-block-diagrams">
+  Submodule Block Diagrams
+  <a class="anchor" href="#submodule-block-diagrams">#</a>
+</h2>
+<p>This main module has several submodules that internally work together. These submodules are displayed in the figure below. The following sections have some more detailed desctiptions for major submodules, such as:</p>
+<ul>
+<li>Overall Game FSM</li>
+<li>Playing Game FSM</li>
+<li>Movement Module(s)</li>
+<li>Animation FSM</li>
+<li>Graphics Orchestration Logic</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 2634; --h: 1600;">
+        <img loading="lazy" alt="img" src="/projects/proj8/detailed.png" width="2634" height="1600">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Detailed block-diagram showing data-paths and submodules (simplified). </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>It should be noted that because this project&rsquo;s timeline was three weeks long, each week served as a distinct phase. The first two weeks corresponded to Milestone 1 and Milestone 2, and the last week served as the project&rsquo;s culmination or capstone.</p>
+<h2 class="heading" id="milestone-1">
+  Milestone 1
+  <a class="anchor" href="#milestone-1">#</a>
+</h2>
+<p>As part of Milestone 1, we have an overall FSM with three states, and one “playing game” FSM embedded inside the second state of the overall FSM. Based on KEY resets and SW inputs, we can display different backgrounds for different game states (starting, playing, ending). These modules are described in more detail below.</p>
+<h3 class="heading" id="overall-game-fsm">
+  Overall Game FSM
+  <a class="anchor" href="#overall-game-fsm">#</a>
+</h3>
+<p>There are three overall states in the game, and they are the starting state, the playing state, and the ending state as described below:</p>
+
+<div class="table-outer">
+    <table>
+        <thead>
+            <tr>
+                <th>Starting State</th>
+                <th>Playing State</th>
+                <th>Ending State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Shall display the game’s name and interface with the user’s input</td>
+                <td>Shall take input from the user to move the submarine and animate sea creatures</td>
+                <td>Shall display “Game Over” and finish the game</td>
+            </tr>
+        </tbody>
+    </table>
+</div><p>The above states can be modelled with an overall finite state machine, which will be referred to as Overall-Game FSM henceforth. After a reset signal, the game starts at the Starting Game state and stays there until an input from the user. An input signal from the user transitions the game to the Playing State, where the player plays the game. This is further expanded as another finite state machine. Once the player loses, a signal will put the game into the Ending Game state. These can be seen in more detail from the state diagram below.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1091; --h: 605;">
+        <img loading="lazy" alt="img" src="/projects/proj8/overallfsmstatediag.jpg" width="1091" height="605">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> State diagram for Overall-Game FSM. Note: the KEYs, goPlayingGame etc. signals are internal signals and were named in a way to make testing easier. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<h3 class="heading" id="playing-game-fsm">
+  Playing Game FSM
+  <a class="anchor" href="#playing-game-fsm">#</a>
+</h3>
+<p>Withing the Playing Game state from the Overall-Game FSM, there are five states. These are described more below:</p>
+<ul>
+<li><strong>PlayerStartPos</strong>: Shall “spawn” the player at a predetermined position</li>
+<li><strong>PlayerMoveUp</strong>: Shall move the player upwards on the screen</li>
+<li><strong>PlayerMoveDown</strong>: Shall move the player downwards on the screen</li>
+<li><strong>PlayerHold</strong>: Shall keep the player at its current position</li>
+<li><strong>PlayerDied</strong>: Shall cause the game to exit from the Playing State</li>
+</ul>
+<p>The player will start on the left side of the screen and can provide input to either move up or down. The user’s input signal for “moving up” being high will put the game in the PlayerMoveUp state, which continuously moves the player’s submarine up. This is likewise for the PlayerMoveDown state. If the user provides no input after previously moving up or down, it puts the game in the PlayerHold state. During the game, if the signal for “died” goes high, it puts the user in the PlayerDied state, which will put the overall game into the ending game state (from the Overall-Game FSM).</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1542; --h: 1050;">
+        <img loading="lazy" alt="img" src="/projects/proj8/playinggamefsmstatediag.jpg" width="1542" height="1050">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> State diagram for Playing-Game FSM. Note: the KEYs, goMoveUp, goHold etc. signals are internal signals and were named in a way to make testing easier. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<h2 class="heading" id="milestone-2">
+  Milestone 2
+  <a class="anchor" href="#milestone-2">#</a>
+</h2>
+<p>With the above completed as part of the Milestone 1, we move on to Milestone 2. The following were completed as part of this second milestone:</p>
+<ul>
+<li>Designed the characters: submarine, fish, and jellyfish.</li>
+<li>Created modules to instantiate the characters from memory.</li>
+<li>Created modules to “print” the backgrounds and the characters on the monitor given a specific <code>x</code>, <code>y</code>, <code>pixel</code>, and <code>colour</code> arrays.</li>
+<li>Created a module to simulate the movement of the submarine through KEYs and its speed on screen (<strong>Movement Module</strong>).</li>
+<li>Created a module to simulate the movement of the fish and its speed on screen (<strong>Movement Module</strong>).</li>
+<li>Created a module to simulate the movement of the jellyfish and its speed on screen (<strong>Movement Module</strong>).</li>
+<li>Created several <strong>counters</strong> (half second, quarter second etc.).</li>
+<li>Designed an FSM (<strong>Animation FSM</strong>) to go through between “printing” the backgrounds and “printing” the different characters.</li>
+<li>Connected the <strong>Graphics Orchestration Logic</strong> with the <strong>Animation FSM</strong>.</li>
+</ul>
+<p>To make it easier to describe the bold-term words, the table below explains each &ldquo;function&rdquo; and its implementation.</p>
+
+<div class="table-outer">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Function</th>
+                <th>Implementation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Movement Module</td>
+                <td>To update a character’s “coordinates” either based on input (submarine) or autonomously (fish and jellyfish) and “print” the character on the display.</td>
+                <td>Instantiates the character from memory, creates the specific <code>x</code>, <code>y</code>, <code>pixel</code>, and <code>colour</code> arrays, and then increments the <code>x</code> and <code>y</code> either based on input or autonomously.</td>
+            </tr>
+            <tr>
+                <td>Animation FSM</td>
+                <td>The VGA can only “print” one thing at a time. This module outputs what to print (background or sub or fish or …)</td>
+                <td>The finite state machine has as many states as there are objects to print. In our case, we have 4 objects (see the state diagram below). Clocked with one of our derived counters (the 256’th second counter in our case), the FSM outputs which object to print based on its state.</td>
+            </tr>
+            <tr>
+                <td>Graphics Orchestration Logic</td>
+                <td>Handle the output of the Animation FSM to direct the correct object to be printed to the VGA, taking into account the Playing Game state (moving up, moving down, or holding)</td>
+                <td>A combinational circuit with an <code>always@(*)</code> that checks which object is to be printed (from Animation FSM) and the current Playing Game state to direct the correct <code>x</code>, <code>y</code>, <code>pixel</code>, and <code>colour</code> arrays to the VGA module.</td>
+            </tr>
+        </tbody>
+    </table>
+</div><p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 645; --h: 684;">
+        <img loading="lazy" alt="img" src="/projects/proj8/animationfsmstatediag.jpg" width="645" height="684">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> State Diagram for Animation FSM. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>Based on this FSM, our Graphics Orchestration Logic module makes it so each object &ldquo;takes turns&rdquo; to appear and be animated on the screen. This sequence of events can be seen with the timing diagram below. This &ldquo;switching&rdquo; of objects at 256 Hertz is the reason for the screen flicker that is visible during animation.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1264; --h: 477;">
+        <img loading="lazy" alt="img" src="/projects/proj8/graphicsorchestration.jpg" width="1264" height="477">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Initial timing diagram for graphics orchestration. Note: final module has all objects displayed for the same amount of time (background is not displayed for less time). </figcaption>
+    </div>
+    
+</figure>
+</p>
+<h2 class="heading" id="bugs-and-issues">
+  Bugs and Issues
+  <a class="anchor" href="#bugs-and-issues">#</a>
+</h2>
+<p>In a holistic view, a project is one big solution to one big problem, and that problem consists of a large number of smaller problems. As such, every step of the project is essentially a problem that needs to be fixed. While our current project is complete now that a working game is created, here were some of the major bugs and issues that we faced (and solved) throughout the project timeline.</p>
+<h3 class="heading" id="-bug-the-overall-fsm-and-playing-game-fsm-sometimes-directly-cycled-through-all-the-states-at-once">
+  ⚠️ <strong>Bug:</strong> The Overall FSM and Playing-Game FSM sometimes directly cycled through all the states at once.
+  <a class="anchor" href="#-bug-the-overall-fsm-and-playing-game-fsm-sometimes-directly-cycled-through-all-the-states-at-once">#</a>
+</h3>
+<p>✅ <strong>Solution:</strong> Several “gate signals” were set so states were not traversed quickly. These “gate signals” were dependent on the current state of the game. For example, if we are in the starting screen, we do not move on to the playing screen until a signal (called <code>goPlayingGame</code> as per detailed block diagram earlier) was high.</p>
+<ul>
+<li>Gate signals for Overall FSM: <code>goPlayingGame</code>, <code>goEndGame</code></li>
+<li>Gate signals for Playing-Game FSM: <code>goMoveUp</code>, <code>goMoveDown</code>, <code>goHold</code>, <code>died</code></li>
+</ul>
+<h3 class="heading" id="-issue-the-overall-fsm-and-playing-game-fsm-were-separate-entities-that-needed-to-be-integrated">
+  ⚠️ <strong>Issue:</strong> The Overall FSM and Playing-Game FSM were separate entities that needed to be integrated.
+  <a class="anchor" href="#-issue-the-overall-fsm-and-playing-game-fsm-were-separate-entities-that-needed-to-be-integrated">#</a>
+</h3>
+<p>✅ <strong>Solution:</strong> Several “reach signals” were implemented to <em>reach</em> into each FSM’s state, permitting other modules to know which state each FSM was in. These “reach signals” controlled how the two FSM’s worked in tandem. For example, if we are in the Overall FSM’s playing state, a signal (called <code>goPlayingGame</code> as per detailed block diagram earlier) would prompt the Playing-game FSM to start up.</p>
+<ul>
+<li>Reach signals for Overall FSM: <code>x</code>, <code>yout</code>, <code>z</code></li>
+<li>Reach signals for Playing-Game FSM: <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code></li>
+</ul>
+<p>🖱️ <strong>Model Sim Waveform:</strong> As part of the solution to this problem, a Model Sim test case (specifically for Playing-Game FSM) led us to finally see evidence of our solution working. See the next section on &ldquo;Simulation Waveforms&rdquo;.</p>
+<h3 class="heading" id="-issue-animating-multiple-objects-on-the-screen-was-not-possible-since-the-existing-implementation-had-only-one-vga-module">
+  ⚠️ <strong>Issue:</strong> Animating multiple objects on the screen was not possible, since the existing implementation had only one VGA module.
+  <a class="anchor" href="#-issue-animating-multiple-objects-on-the-screen-was-not-possible-since-the-existing-implementation-had-only-one-vga-module">#</a>
+</h3>
+<p>✅ <strong>Solution:</strong> A new FSM was designed, called “Animation FSM”, would decide what object to print at what clock cycle, and it would would pass this information to the VGA module.</p>
+<p>🖱️ <strong>Model Sim Waveform:</strong> As part of the solution to this problem, a Model Sim test case for this “Animation FSM” led us to finally see evidence of our FSM properly deciding what to “print” to the screen. See the next section on &ldquo;Simulation Waveforms&rdquo;.</p>
+<h3 class="heading" id="-issue-the-submarine-was-not-bounded-and-obstacles-started-on-the-left-which-is-a-problem-since-that-would-terminate-the-game">
+  ⚠️ <strong>Issue:</strong> The submarine was not bounded and obstacles started on the left (which is a problem since that would terminate the game).
+  <a class="anchor" href="#-issue-the-submarine-was-not-bounded-and-obstacles-started-on-the-left-which-is-a-problem-since-that-would-terminate-the-game">#</a>
+</h3>
+<p>✅ <strong>Solution:</strong> After continuously testing we realized that we were bounding the submarine incorrectly and it was just a matter of changing the bounding coordinates to 7 bit number compared to 6 bit number in Verilog. For example, 6’d88 is not the same as 7’d88. From that one simple tweak we were able to bound the submarine correctly. Due to that same issue obstacles started initially from a different position compared what was wanted.</p>
+<h3 class="heading" id="-bug-the-game-was-not-able-to-reset-at-all">
+  ⚠️ <strong>Bug:</strong> The game was not able to reset at all
+  <a class="anchor" href="#-bug-the-game-was-not-able-to-reset-at-all">#</a>
+</h3>
+<p>✅ <strong>Solution:</strong> After some testing and debugging, it was discovered that the signal to end the game was a register whose value was being updated on the rising edge of a derived clock. This derived clock reset on KEY[0], so when KEY[0] was pressed, the clock never went on a rising edge, and our ending-game signal never got reset. To fix this, we implemented two resets, a KEY[1] reset and a KEY[0] reset.</p>
+<h3 class="heading" id="-issue-collision-detection-was-not-working-at-all">
+  ⚠️ <strong>Issue:</strong> Collision detection was not working at all
+  <a class="anchor" href="#-issue-collision-detection-was-not-working-at-all">#</a>
+</h3>
+<p>✅ <strong>Solution:</strong> Changed collision detection logic fully by using the pixel counter coordinates and the movement coordinates used for printing the objects and checked if they were equal in the main always block. If they are equal then we have a register that saves 1 and we send that register to the OverallFSM which will technically be our switch to go to end game.</p>
+<h2 class="heading" id="simulation-waveforms">
+  Simulation Waveforms
+  <a class="anchor" href="#simulation-waveforms">#</a>
+</h2>
+<p>As with any complex system, there is a lot of testing required. Most of the testing was done using the FPGA hardware, but in some cases, it is necessary to use simulations to see timing waveforms. ModelSim (part of Quartus) was used to simulate these waveforms using testbench files. In the subsections below, the test cases for Playing Game FSM and Animation FSM are explained in more detail.</p>
+<h3 class="heading" id="playing-game-fsm-test-case">
+  Playing Game FSM Test Case
+  <a class="anchor" href="#playing-game-fsm-test-case">#</a>
+</h3>
+<p>For the ModelSim, the PlayingGameFSM is instantiated and a 50MHz clock (with 10 ns period) is generated. We initialize the inputs and set switches to low. Then, we apply a reset for the keys. After that, here is the testing sequence:</p>
+<ul>
+<li>We put our FSM into the PlayingGame state by making SW[0] high</li>
+<li>Then we put it low again so the FSM can do its thing</li>
+<li>We try to move the player up for 40 ns</li>
+<li>We try to move the player down for 60 ns</li>
+<li>We try to move the player up for 20 ns</li>
+<li>We try to move the player down for 20 ns</li>
+<li>Then, we assume we hit a sea creature and died, so we put SW[5] highM</li>
+<li>We finish off the simulation after another 100 ns</li>
+</ul>
+<p>These can be seen from the ModelSim simulation in the figures below:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1920; --h: 1080;">
+        <img loading="lazy" alt="img" src="/projects/proj8/sim1.1.png" width="1920" height="1080">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> The first 0.22 ns of the simulation. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1920; --h: 1080;">
+        <img loading="lazy" alt="img" src="/projects/proj8/sim1.2.png" width="1920" height="1080">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> The last part of the simulation. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<h3 class="heading" id="animation-fsm-test-case">
+  Animation FSM Test Case
+  <a class="anchor" href="#animation-fsm-test-case">#</a>
+</h3>
+<p>In this test case, we see if the Animation FSM is properly cycling through “printing” the background, the submarine, the fish, and the jellyfish one after the other for the same duration. We are also checking if the FSM properly loops back while always keeping the “printing” of the background first. That probably won&rsquo;t make much sense without the ModelSim screenshots, which I have unfortunately lost&hellip; but that&rsquo;s okay. I think the main idea is clear: we had to do a LOT of testing.</p>
+<h2 class="heading" id="future-work">
+  Future Work
+  <a class="anchor" href="#future-work">#</a>
+</h2>
+<p>In the future, this project could be improved by:</p>
+<ul>
+<li>making the animation smoother (clocked higher)</li>
+<li>allowing replays without reset</li>
+<li>displaying the score on the display at the end of the game</li>
+<li>adding a “shoot” feature with elimination scores</li>
+<li>adding more obstacles that move in more directions</li>
+</ul>
+<h2 class="heading" id="final-work-distribution">
+  Final Work Distribution
+  <a class="anchor" href="#final-work-distribution">#</a>
+</h2>
+<p>With a project this complex, it is important to work well with your partner. I am grateful for having Uzair Nadeem as my partner because we worked together very well and supported each other when one of us was stuck. In reality, every module was worked on by both of us, but if we had to create a &ldquo;broad&rdquo; work distribution, it would look as follows:</p>
+
+<div class="table-outer">
+    <table>
+        <thead>
+            <tr>
+                <th>Zaeem Ahmad</th>
+                <th>Uzair Nadeem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🛠️ Overall FSM</td>
+                <td>🎨 Backgrounds/character designs</td>
+            </tr>
+            <tr>
+                <td>🛠️ PlayingGame FSM</td>
+                <td>🖥️ VGA module</td>
+            </tr>
+            <tr>
+                <td>🕒 Various second-enable clocks</td>
+                <td>🛠️ Graphics Orchestration Logic</td>
+            </tr>
+            <tr>
+                <td>🎨 Graphics Orchestration Logic</td>
+                <td>🚤 Submarine movement and display modules</td>
+            </tr>
+            <tr>
+                <td>🎥 Animation FSM</td>
+                <td>🚧 Obstacle movement and display modules</td>
+            </tr>
+            <tr>
+                <td>⌨️ Keyboard logic and integration</td>
+                <td>🔍 Collision detection</td>
+            </tr>
+            <tr>
+                <td>🔢 Score Counter</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/projects/proj7/">
+                        Datavvy Data Analysis
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
+
+    
+    <p>© Copyright 2025 Zaeem Ahmad. Powered by
+        <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+  <link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  
+<script defer 
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

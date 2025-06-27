@@ -1,0 +1,15 @@
+{{ $showFooter := default true .Site.Params.showFooter }}
+{{ if $showFooter }}
+    {{/* Footer start hook */}}
+    {{ partial "functions/get_hook.html" (dict "hook" "footer_start" "context" .) }}
+
+    {{ if not .Site.Params.footerContent }}
+    <p>© Copyright 2025 Zaeem Ahmad. Powered by
+        <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+    {{ end }}
+    
+    {{ with .Site.Params.footerContent }}
+    <p>{{ . | markdownify }}</p>
+    {{ end }}
+{{ end }}

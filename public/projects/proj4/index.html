@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="description" content="A fun little Windows utility software I made as a gift to my highschool chemistry teacher; it lets you spell any word/sentence using periodic table elements instead of letters!"/>
+
+
+
+<title>
+    
+    Elemental | Zaeem Ahmad
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/projects/proj4/"/>
+
+<meta property="og:url" content="http://localhost:1313/projects/proj4/">
+  <meta property="og:site_name" content="Zaeem Ahmad">
+  <meta property="og:title" content="Elemental">
+  <meta property="og:description" content="A fun little Windows utility software I made as a gift to my highschool chemistry teacher; it lets you spell any word/sentence using periodic table elements instead of letters!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-04-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-04-16T00:00:00+00:00">
+    <meta property="article:tag" content="Featured">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.92c3bf7119b98cfdc79e93f36a451eb901d8bbbfed7d75814e6436cf6c9085dc.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="light">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Zaeem Ahmad</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/projects" >
+                /projects
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/resume" >
+                /resume
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">~</a><span class="breadcrumbs-separator">/</span><a href="/projects/">Projects</a><span class="breadcrumbs-separator">/</span>
+        <a href="/projects/proj4/">Elemental</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">Elemental</h1>
+        <p class="single-summary">A fun little Windows utility software I made as a gift to my highschool chemistry teacher; it lets you spell any word/sentence using periodic table elements instead of letters!</p>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="author">Solo project by Zaeem Ahmad </p>
+            
+            <p class="single-date">
+              <time datetime="2024-04-16T00:00:00&#43;00:00">16 Apr 2024</time>
+              &nbsp; · &nbsp;7 min read
+            </p>
+          </div>
+        </div>
+        
+    </header>
+      <aside class="toc">
+        <p><strong>Table of contents</strong></p>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#inspiration">Inspiration</a></li>
+    <li><a href="#what-elemental-does">What Elemental Does</a></li>
+    <li><a href="#how-i-built-elemental">How I Built Elemental</a></li>
+    <li><a href="#challenges-i-ran-into">Challenges I Ran Into</a></li>
+    <li><a href="#what-i-learned">What I Learned</a></li>
+  </ul>
+</nav>
+      </aside>
+    
+    <div class="single-content">
+      <h2 class="heading" id="inspiration">
+  Inspiration
+  <a class="anchor" href="#inspiration">#</a>
+</h2>
+<p>My favourite courses in high school were the senior chemistry courses, SCH3U and SCH4U. Part of the reason was the actual chemistry content, which I found fascinating, but the bigger reason was my teacher. I loved learning in her class, and she was one of my best teachers in school.</p>
+<p>We had our high school chemistry classes in the school’s laboratory. Likewise, my teacher spent most of her day in the lab. It was known as <em>her domain</em> so to say. Outside the lab’s door on the opposite hallway wall, there was a whiteboard roughly the shape of a sheet of paper but about half the size of a standard door. On it, my teacher wrote little words of encouragement, advice, quotes, and chemistry jokes. She would often spell things out using the elements of the periodic table. For example, when making an oxygen joke, she would spell out oxygen as O x Y Ge N where O stood for oxygen, y for yttrium, Ge for germanium, and N for nitrogen.</p>
+<p>However, it is difficult to spell out most things in <em>periodic table</em> because one would need to know the names and symbols of all the elements. Also, certain combinations of letters could be spelled in different ways. Some combinations would give you more options with elements than others.</p>
+<p>To solve this problem, I decided to create a computer program. Introducing… Elemental!</p>
+<h2 class="heading" id="what-elemental-does">
+  What Elemental Does
+  <a class="anchor" href="#what-elemental-does">#</a>
+</h2>
+<p>Elemental can be thought of as a utility program. It accepts a string from a user and then uses algorithms to determine the best way to spell it out using periodic table elements. For example, if the user entered the name “Kausar”, then the program would spell it out as such:<br>
+    🧪 K      Potassium (Atomic number 19)</p>
+<p>    🧪 Au   Gold (Atomic number 79)</p>
+<p>    🧪 S      Sulfur (Atomic number 16)</p>
+<p>    🧪 Ar    Argon (Atomic number 18)</p>
+<p>When I say “the best way” to spell out, I am talking about the number of letters being substituted by elements. The higher the number, the better. This may seem like a niche scenario, but when you go over two or three-letter words, there are multiple ways to spell them out using periodic table elements. For example, take the word “hero.” You can spell it out in two ways:</p>
+
+<div class="table-outer">
+    <table>
+        <thead>
+            <tr>
+                <th>Spelling 1</th>
+                <th>Spelling 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🧪 <strong>He</strong>    Helium (Atomic number 2)</td>
+                <td>🧪 <strong>H</strong>     Hydrogen (Atomic number 1)</td>
+            </tr>
+            <tr>
+                <td>✒️ <strong>r</strong>        Regular Letter</td>
+                <td>🧪 <strong>Er</strong>    Erbium (Atomic number 68)</td>
+            </tr>
+            <tr>
+                <td>🧪 <strong>O</strong>      Oxygen (Atomic number 8)</td>
+                <td>🧪 <strong>O</strong>     Oxygen (Atomic number 8)</td>
+            </tr>
+        </tbody>
+    </table>
+</div><p>As you can see, spelling 2 uses more periodic table elements, and is therefore more desirable.</p>
+<h2 class="heading" id="how-i-built-elemental">
+  How I Built Elemental
+  <a class="anchor" href="#how-i-built-elemental">#</a>
+</h2>
+<p>In first year second semester, I took a programming course in C. While it got demanding at times, especially near the end, I found the challenge of programming enjoyable. To practice my skills a little and to get a headstart on next year’s programming courses, I planned to create something using C++.  After consulting a professional engineer with over a decade of software engineering experience, I decided to go with C++ for functionality and the Qt framework for the GUI.</p>
+<p>I made a habit of writing out on paper my thoughts and ideas on how to structure the program before starting to code. This helped me write out the skeleton for several functions essential for my program to work, which include:</p>
+<ul>
+<li>A struct or vector to organize the periodic table elements</li>
+<li>A way to store all the periodic table elements, either in memory or as a resource file</li>
+<li>A way to load or import the elements into memory if I decided to use a source file</li>
+<li>Several functions to handle input and output</li>
+<li>Some algorithm(s) for determining the optimal spelling</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 786; --h: 172;">
+        <img loading="lazy" alt="img" src="/projects/proj4/herodemo.png" width="786" height="172">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Prompt and output of my text-based version of Elemental. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>Using this, I was able to create a skeleton program in C++ with input/output through the terminal. Once I fixed my code’s logic, I moved on to creating a GUI version. As mentioned earlier, I used the Qt framework to design the graphical user interface and its interaction with my code. I started putting my code into the Qt Creator program and went to work designing the GUI, which went through a few design iterations:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 2148; --h: 838;">
+        <img loading="lazy" alt="img" src="/projects/proj4/comb_gui.png" width="2148" height="838">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> Left: Earlier GUI of Elemental. Right: Final GUI of Elemental. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>The longest phase of the project was migrating the pure C++ code from VS Code to the Qt Creator IDE and getting it to run. Because Qt used a slightly different flavour of C++ with Qt’s own libraries and functions, it took some time to understand all of that.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1919; --h: 1020;">
+        <img loading="lazy" alt="img" src="/projects/proj4/coding.png" width="1919" height="1020">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> A portion of Elemental&rsquo;s source code. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>Once all of that was done, I packaged and exported the program into a single executable. Because Elemental needed information on all the periodic table elements as a resource file, I had to install it in a path containing the resource file. This is how I shared the app with my teacher.</p>
+<p>![img](comb_out.png &ldquo;Left: Elemental when you open it up. Right: Elemental&rsquo;s output for &ldquo;hero&rdquo;.&rdquo;)</p>
+<h2 class="heading" id="challenges-i-ran-into">
+  Challenges I Ran Into
+  <a class="anchor" href="#challenges-i-ran-into">#</a>
+</h2>
+<p>While creating the initial C++ skeleton code in VS Code, the most challenging part was coming up with a good algorithm to spell out words/phrases. What I did was first have a pointer pointing to the first character of the user-inputted string. Calling this pointer <em>Element</em>, we have the following algorithm:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 2000; --h: 580;">
+        <img loading="lazy" alt="img" src="/projects/proj4/Scrap.png" width="2000" height="580">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> My initial algorithm for spelling out words. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<p>The while implementing this algorithm did spell out words in <em>periodic table</em>, there were a few problems that arose after some testing:</p>
+<ul>
+<li>
+<p>This algorithm only tried finding elements for (a) letters currently being pointed to and (b) the letter being pointed to + the next letter. For example, given the word “hero”, and say Element currently pointing to the letter “h”, the algorithm would first search for the letter “h” and find hydrogen. Then it would search for “he” and find helium. Because the last step favours 2-letter elements, the program would print out “He” for helium and move on to the letter “r”. Because there is no element with the letter “r”, it would try “re”. Since “re” doesn’t exist either, it would simply print out “r” and move on with the word. The final answer would have only two elements, and we know this isn’t the best way to spell hero (see section 2).</p>
+</li>
+<li>
+<p>This algorithm did not check letter combinations <em>before</em> the letter currently being pointed to. Ideally, a more thorough algorithm would check all three cases:</p>
+</li>
+</ul>
+<ol>
+<li>The letter itself</li>
+<li>The letter itself + the letter after</li>
+<li>The letter itself + the letter before</li>
+</ol>
+<ul>
+<li>Further, this algorithm had no way to know if a certain spelling method was the best one or not. For example, given the two ways to spell “hero”—one with two elements and the other with three—the algorithm would go for the first and therefore worse option.</li>
+</ul>
+<p>Now the new challenge was to come up with an algorithm to solve these issues. The new algorithm would need to check all three cases for searching elements as well as figure out which spelling method had the most number of elements. This time, calling the letter being pointed to <em>Current</em>, the new algorithm looks as such:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 1200; --h: 667;">
+        <img loading="lazy" alt="img" src="/projects/proj4/2Scrap.png" width="1200" height="667">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> My smarter, more robust algorithm for spelling sentences. </figcaption>
+    </div>
+    
+</figure>
+</p>
+<h2 class="heading" id="what-i-learned">
+  What I Learned
+  <a class="anchor" href="#what-i-learned">#</a>
+</h2>
+<p>Being my first full-fledged GUI program built from scratch, I was able to make use of my new programming knowledge from first year as well as learn some new tools. For example, it was my first time using C++ as well as the Qt Framework and Qt Creator. I learned how to break down a relatively complex problem into smaller parts, debugging each section before moving on to the next. I learned to iterate my design, assessing current algorithms through rigorous testing to find areas of improvement before expanding upon them. Overall, it was a challenging yet satisfying experience.</p>
+<p>Trying to build a real-life program is likely the best way to learn new languages and tools. Plus, I was able to showcase this app to my teacher, who ended up liking it a lot. She even wanted to install it on her home computer!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" style="--w: 4032; --h: 3024;">
+        <img loading="lazy" alt="img" src="/projects/proj4/heroshirt.jpg" width="4032" height="3024">
+    </div>
+
+    
+    <div class="caption-container">
+        <figcaption> This tshirt of mine played an important part when initially thinking of Elemental. </figcaption>
+    </div>
+    
+</figure>
+</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/projects/proj3/">
+                        OpticFlip
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/projects/proj5/">
+                        ECE Hardware Workshop
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
+
+    
+    <p>© Copyright 2025 Zaeem Ahmad. Powered by
+        <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+  <link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  
+<script defer 
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

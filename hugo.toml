@@ -1,0 +1,91 @@
+baseURL = 'https://zaeem-ahmad.github.io'
+languageCode = 'en-us'
+title = 'Zaeem Ahmad'
+theme = 'typo'
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Home meta description
+description = "Zaeem Ahmad's personal website"
+
+# Appearance settings
+theme = 'light'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content in markdown
+homeIntroTitle = 'Welcome!'
+homeIntroContent = """
+My name is Zaeem, and I study electrical engineering at the University of Toronto. This is my personal website where I like to write about the [projects](/projects) I'm involved in and share my [engineering notes](/notes). Feel free to [read about myself](/about) or check out my [résumé](/resume).
+
+### News
+**Dec 30, 2024:** Uploaded FPGA project from ECE241.
+
+**Sep 03, 2024:** First day of second year. Uploaded KrossKut info to wrap up the summer.
+
+**Aug 27, 2024:** Added a JSON + PDF resume.
+
+**Aug 26, 2024:** Finally launched this site.
+"""
+
+singleDateFormat = '2 Jan 2006'
+
+# Collection to display on home
+# homeCollectionTitle = 'News'
+# homeCollection = 'news'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '02 Jan 2006'
+
+# Footer
+showFooter = true
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "~"
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/zaeem-ahmad-ca/"
+
+# [[params.social]]
+# name = "github"
+# url = "https://github.com/tomfran"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "projects"
+url = "/projects"
+
+[[params.menu]]
+name = "notes"
+url = "/notes"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+[[params.menu]]
+name = "resume"
+url = "/resume"
+
+# [[params.menu]]
+# name = "tags"
+# url = "/tags"
+
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'bw'

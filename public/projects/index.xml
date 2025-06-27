@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Zaeem Ahmad</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Zaeem Ahmad</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SimProcLator</title>
+      <link>http://localhost:1313/projects/proj9_simproclator/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj9_simproclator/</guid>
+      <description>One of my favourite projects: a processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions.</description>
+    </item>
+    <item>
+      <title>20, 000 Leagues Under the Sea</title>
+      <link>http://localhost:1313/projects/proj8_20kleagues/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj8_20kleagues/</guid>
+      <description>My good friend Uzair and I develop an arcade-style game implemented in hardware using FPGAs and Verilog. Those ~3 weeks were rather challenging to get through, but very satisfying!</description>
+    </item>
+    <item>
+      <title>Datavvy Data Analysis</title>
+      <link>http://localhost:1313/projects/proj7_krosskut/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj7_krosskut/</guid>
+      <description>Dipping my toe in the world of data science with the help of senior data engineer and entrepreneur Sakibul Hassan. Many hours of troubleshooting with my buddy Mohammad Mahrus!</description>
+    </item>
+    <item>
+      <title>Nightblade</title>
+      <link>http://localhost:1313/projects/proj6_nightblade/</link>
+      <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj6_nightblade/</guid>
+      <description>My friend and I won second place with our line-tracking robot at the ECE Summer Robotics Competition (hosted by UofT&amp;rsquo;s ECE Department). Everyone had loads of fun!</description>
+    </item>
+    <item>
+      <title>ECE Hardware Workshop</title>
+      <link>http://localhost:1313/projects/proj5_eceworkshop/</link>
+      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj5_eceworkshop/</guid>
+      <description>A hardware workshop hosted by Professor Hamid Shokrallah and UofT&amp;rsquo;s ECE department focused on introductory electronics and discrete analog circuits.</description>
+    </item>
+    <item>
+      <title>Elemental</title>
+      <link>http://localhost:1313/projects/proj4_elemental/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj4_elemental/</guid>
+      <description>A fun little Windows utility software I made as a gift to my highschool chemistry teacher; it lets you spell any word/sentence using periodic table elements instead of letters!</description>
+    </item>
+    <item>
+      <title>OpticFlip</title>
+      <link>http://localhost:1313/projects/proj3_esp2/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj3_esp2/</guid>
+      <description>My Engineering Strategies and Practice II (APS112) project where I learned to refine my project management skills to lead a team in developing a conceptual design for a cerebral palsy patient.</description>
+    </item>
+    <item>
+      <title>MedTray</title>
+      <link>http://localhost:1313/projects/proj2_medtray/</link>
+      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj2_medtray/</guid>
+      <description>My first ever hackathon, MakeUofT (happens to be Canada&amp;rsquo;s largest hardware hackathon), where two of my buddies and I developed a prototype for an automatic medicine dispenser for elderly people</description>
+    </item>
+    <item>
+      <title>Hart House Wayfinding</title>
+      <link>http://localhost:1313/projects/proj1_harthouse/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj1_harthouse/</guid>
+      <description>My Engineering Strategies and Practice 1 (APS111) team project, which was my first taste of the engineering design process applied to a real life problem: helping people not get lost at Hart House</description>
+    </item>
+  </channel>
+</rss>
