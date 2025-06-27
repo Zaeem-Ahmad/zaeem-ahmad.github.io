@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Zaeem Ahmad'
 theme = 'typo'
 
+# for github pages
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [taxonomies]
 tag = 'tags'
 
