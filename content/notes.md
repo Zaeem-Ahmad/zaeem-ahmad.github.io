@@ -31,7 +31,7 @@ ECE241 - Digital Systems
 
 [MAT290 - Advanced Engineering Mathematics](https://drive.google.com/file/d/1qDN9tOI9SBt6_sO3dWX5OX1l8vSyDecj/view?usp=sharing)
 
-MAT291 - Introduction to Mathematical Physics
+[MAT291 - Introduction to Mathematical Physics](https://zaeem-ahmad.github.io/assets/pdf/zaeem_mat290.pdf)
 
 ### First Year Winter
 
