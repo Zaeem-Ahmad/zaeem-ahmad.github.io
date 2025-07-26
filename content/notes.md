@@ -5,61 +5,63 @@ hideBackToTop: false
 hidePagination: true
 ---
 
-**I'm currently in the process of scanning my notebooks and gathering my notes from first year, so I'll be updating this page when notes are ready. I've organized this in reverse chronological order (i.e., starting from the most recent semester).** 
+These are my university notes, which I've organized in reverse chronological order (i.e., starting from the most recent semester, so scrolling down means older/lower years). 
+
+FYI, I didn't take notes for the following courses:
+* APS100 - Orientation to Engineering
+* ECE191 - Introduction to ECE
+* APS112 - Engineering Strategies and Practice 2
+* ECE201 - ECE Seminar
+* ECE212 - Circuit Analysis
 
 ### Second Year Winter
 
-ECE212 - Circuit Analysis
+[ECE216 - Signals and Systems](/zaeem_ece216.pdf)
 
-ECE216 - Signals and Systems
+[ECE221 - Electric and Magnetic Fields](/zaeem_ece221.pdf)
 
-ECE221 - Electric and Magnetic Fields
+[ECE243 - Computer Organization](/zaeem_ece243.pdf)
 
-ECE243 - Computer Organization
-
-ECE295 - Hardware Design and Communication
+[ECE295 - Hardware Design and Communication](https://zaeemahmad.notion.site/ECE295-Lecture-2277acf62de780f1ba2afbf49a765cd4) \
+Lectures twice a week, contains only what I took pictures of
 
 ### Second Year Fall 
 
-ECE201 - ECE Seminar
+[ECE231 - Introductory Electronics](/zaeem_ece231.pdf)
 
-ECE231 - Introductory Electronics
-
-ECE241 - Digital Systems
+[ECE241 - Digital Systems](/zaeem_ece241.pdf)
 
 [ECE244 - Programming Fundamentals](https://zaeemahmad.notion.site/ECE244-Notes-f9e8a6d081f34f6a992c81540c10e9fc?pvs=143)
 
-[MAT290 - Advanced Engineering Mathematics](https://drive.google.com/file/d/1qDN9tOI9SBt6_sO3dWX5OX1l8vSyDecj/view?usp=sharing)
+[MAT290 - Advanced Engineering Mathematics](/zaeem_mat290.pdf)
 
-[MAT291 - Introduction to Mathematical Physics](https://zaeem-ahmad.github.io/assets/zaeem_mat290.pdf)
+[MAT291 - Introduction to Mathematical Physics](/zaeem_mat291.pdf)
 
 ### First Year Winter
 
-APS105 - Computer Fundamentals
+[APS105 - Computer Fundamentals](zaeem_aps105_collection.pdf) \
+Lecture 2, some lectures from week 8-9, and some function summaries
 
-APS112 - Engineering Strategies and Practice 2 (aka ESP 2)
+[ECE110 - Electrical Fundamentals](/zaeem_ece110.pdf) \
+Contains a few blank examples from Prof. Mojahedi's notes
 
-ECE110 - Electrical Fundamentals
+[MAT187 - Calculus 2](/zaeem_mat187_pce)
 
-ECE191 - Introduction to ECE
-
-MAT187 - Calculus 2
-
-MIE100 - Dynamics
+[MIE100 - Dynamics](/zaeem_mie100.pdf) \
+No notes for last few lectures as I switched profs
 
 ### First Year Fall
 
-APS100 - Orientation to Engineering
+[APS110 - Engineering Chemistry and Materials Science](/zaeem_aps110.pdf)
 
-APS110 - Engineering Chemistry and Materials Science
+[APS111 - Engineering Strategies and Practices 1 (aka ESP 1)](/zaeem_aps111_week1.pdf) \
+Notes up to week 1 (stopped after that)
 
-APS111 - Engineering Strategies and Practices 1 (aka ESP 1)
+[CIV100 - Mechanics](/zaeem_civ100.pdf)
 
-CIV100 - Mechanics
+[MAT186 - Calculus 1](/zaeem_mat186_pce.pdf)
 
-MAT186 - Calculus 1
-
-MAT188 - Linear Algebra
+[MAT188 - Linear Algebra](/zaeem_mat188_pce.pdf)
 
 ### About my Program
 
