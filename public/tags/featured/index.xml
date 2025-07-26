@@ -6,8 +6,15 @@
     <description>Recent content in Featured on Zaeem Ahmad</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SDR </title>
+      <link>http://localhost:1313/projects/proj10_subsystemc/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/proj10_subsystemc/</guid>
+      <description>One of my favourite projects: a processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions.</description>
+    </item>
     <item>
       <title>SimProcLator</title>
       <link>http://localhost:1313/projects/proj9_simproclator/</link>
