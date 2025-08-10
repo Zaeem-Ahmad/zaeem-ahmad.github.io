@@ -11,7 +11,7 @@ autonumber: false
 math: true
 tags: ["featured"]
 showTags: false
-draft: false
+draft: true
 ---
 
 ## Introduction
