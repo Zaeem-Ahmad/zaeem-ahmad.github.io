@@ -1,9 +1,9 @@
 ---
-title: "SDR "
-author: "The Duo: Zaeem Ahmad, Uzair Nadeem"
+title: "Local Oscillator and User Interface"
+author: "Zaeem Ahmad, Uzair Nadeem, Thariq Pasha"
 # authorAvatarPath: "/avatar.jpg"
 date: "2025-04-30"
-summary: "One of my favourite projects: a processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions."
+summary: "A team project where we design an electrical hardware subsystem for a software defined radio (SDR). A challenging yet enriching first experience in PCB and firmware design, all while on a tight schedule."
 description: "One of my favourite projects: A processor simulator for a simple 8-bit processor written in C. Simulates the step-by-step execution of the add, subtract, and or-immediate instructions."
 toc: true
 readTime: true
@@ -11,91 +11,100 @@ autonumber: false
 math: true
 tags: ["featured"]
 showTags: false
-draft: true
+draft: false
 ---
 
 ## Introduction
 
-SimProcLator was the final project for Computer Organization (ECE243). In one sentence, this course taught us how computers operate. Building off from Digital Systems (ECE241), we learned computer organization from several abstraction levels: starting from assembly language level, then jumping up to C language level, before diving in to the digital design and operation of a simple processor. In essence, this was a course on embedded systems, because a large portion of the course was about software interacting with hardware and the real world using input/output devices.
+This project was undertaken as part of a second year design course called ECE295. It is a hardware design and communication course aimed at giving students a taste of some real electrical engineering (requirements, schematics, designing PCBs etc.) as well as the communication aspect of it (documentation, presentations etc.). 
 
-Personally, this course was one of my favourite ones in second year because it finally answered the big question of how a computer REALLY operates. The weeks dedicated to the digital design and operation of a simple processor were perhaps my favourite. My friend and lab partner also felt the same way. For this reason, we decided to make our final project about a simple processor and how it executes instructions. In the figure below, you can see the processor we learned in class, frankly called "Simple Processor".
+The goal of the course is to create a flexible radio transceiver (FLRTRX). The FLRTRX designed in ECE295 is the hardware aspect of a software defined radio (SDR), which is a commonly used type of radio where many components/systems historically implemented as hardware are now done through computer software. 
 
-![img](simproc.png "Block diagram of the Simple Processor we learned about in ECE243.")
-
-The Simple Processor is a tiny 8-bit processor with 4 registers, 256 bytes of memory, and 10 instructions. The digital design of this processor includes some key registers, such as the Program Counter (PC), Instruction Register (IR), and flag registers (N and Z bit). There is also an arithmetic logic unit (ALU), numerous multiplexers, and other more complex digital hardware such as memory and the register file (RF).
+Creating a full radio is a big undertaking, so the FLRTX was broken down into the six subsystems as shown in the figure below. The class of ~200 was broken into teams of three for a total of ~65 teams, resulting in about 10 teams per subsystem.
 
 
-## What is SimProcLator?
+![img](block.png "Figure 1: Block diagram of the SDR built in ECE295, featuring the 6 subsystems.")
 
-This project, named “SimProcLator”, is exactly what it sounds like: a simple processor simulator. The name was inspired by [CPULator](https://cpulator.01xz.net/), a computer system simulator that was used extensively in this course and project. SimProcLator lets the user select one of the three currently supported instructions: 
-* `add Ra, Rb`: add contents of register Ra and Rb and store the result into register Ra.
-* `sub Ra, Rb`: subtract contents of register Ra and Rb and store the result into Ra.
-* `ori imm5`: bit-wise logical OR the contents of register R1 (set by convention) with imm5 constant and store the result in R1.
+Our team was assigned Subsystem C, which was the local oscillator and user-interface. The local oscillator in a radio is supposed to generate two waves that are 90 degrees out-of-phase from each other. These signals are then used in other subsystems of the radio for DSP (Digital Signal Processing). The user interface of the radio allows the user to adjust the frequency of the waves generated, to change if the radio is transmitting information or receiving, and if the user would like to make these changes through a computer or through the device's switches and toggles. The user interface is also responsible for communicating all this information for anyone to see on a display on the module.
 
-For the `add` and `sub` instructions, SimProcLator prompts the user to select their registers `Ra` and `Rb` using the keyboard. Likewise for the `ori` instruction, the user can manually input a 5 digit binary constant `imm5`. 
 
-Once the user inputs the information, SimProcLator moves on to an animated processor screen that shows step-by-step all the register enable-signals and MUX select bits required on each cycle of the instruction execution. 
 
-![img](screens.png "Some screenshots of SimProcLator running. On the left is the start screen, and on the right is a moment captured during SimProcLator's simulation of the "add Ra, Rb" instruction execution.")
+## Getting Hands On
 
-## How to Operate SimProcLator
+The course started off by explaining the basics of a radio and a general overview of the hardware design cycle before teams were assigned subsystems. Next, we had several focused lab sessions to learn more about our specific subsystem, Subsystem C. 
 
-Before operating SimProcLator, it helps to understand the context and hardware in which it is designed to run on. The University of Toronto FPGA labs have DE1-SoC boards, which contain a large FPGA chip. Using an Intel program called Monitor Program, a **NIOS V processor** (a type of RISC V processor) is instantiated on the FPGA, and the hardware on the DE1-SoC is used to create a **NIOS V computer system** (i.e., with memory, I/O devices etc.). 
+Because Subsystem C was one of the two subsystems with a microcontroller (the other one Subsystem D), we got some background information on different types of microcontrollers available on the market and how they worked at a high level. To get some hands-on experience, we soldered our microcontroller, the ATmega324PB, onto a breakout board as shown in Figure 2 using solder paste and a reflow oven.
 
-To use the NIOS V processor, one must load instructions into memory. In this course, we learned to write these instructions in either NIOS V assembly language or C. SimProcLator is written in C (source code provided on GitHub), which a user loads into the NIOS V processor using the Monitor Program.
+![img](mcu.jpg "Figure 2: The Adafruit breakout board with solder paste on the pads just prior to placing the MCU in place.")
 
-Fortunately, you do not need a DE1-SoC to run SimProcLator because it can be run on [CPULator](https://cpulator.01xz.net/). Simply go to the website, hover over **File**, click on **open**, and choose the C file with the code. Then, press on **Compile and Load**. Once that is done (and you see the disassembly pane), click on **Continue** to run the program. You can provide keyboard input by sending letters through the **PS/2 keyboard or mouse** panel on the right (**Devices** pane; make sure to use "IRQ 22" since the NIOS V DE1-SoC has two PS/2 inputs).
+The next step was to get familiar with assembling a full circuit onto a PCB and using instruments for testing functionality. To do this, we were given a schematic for a DC voltage regulator designed to regulate 5 - 30V input voltage to roughly 5V output. The voltage regulator used an OpAmp, a BJT, and a zener diode as shown in Figure 3. To the right, you will see the completed circuit once connected to an input voltage.
 
-The login screen lets you select an instruction to execute using the keyboard. Click “a” key for `add Ra, Rb` instruction, “s” for `sub Ra, Rb` instruction, and “o” for `ori imm5` instruction.
+![img](m0_board.png "Figure 3: Left: schematic of the voltage regulator. Right: assembled regulator connected to power supply.")
 
-After that you will be greeted with a page to select registers for the add and sub instructions. Press the number on the keyboard corresponding to the register you want to select on the screen. For example, for Ra to be R3 press “3” or for Rb to be R2 press “6”. After register selection, press the “space bar”.
+We gained experience using electrical instrumentation tools while testing this voltage regular. We used a DC power supply, an AC wall-plug, and a waveform generator to provide various input signals to the board. We then used a digital multimeter (as per Figure 4) and oscilloscope to verify the output and check if the board met requirements (it did!). This little “warm-up” project prepared us for designing, soldering, and testing our real Subsystem C board.
 
-For all instructions, you will see the instruction encoding page. For `add` and `sub` instructions encoding will be done automatically. For the `ori` instruction, you will have to input manually an imm5 value by clicking “0” and “1” on the keyboard. Once encoding is done, you can press “space bar” to go to the processor page. 
+![img](m0_meas.png "Figure 4: Left: measuring regulated output voltage. Right: output is correctly regulated to ~5V.")
 
-From here it will automatically go through the process of the instruction execution while also explaining what happens when in each clock cycle. You can press “space bar” to pause and continue anywhere in between this process. 
+## Our Team's Subsystem C
 
-Once instruction is done executing, a DONE sign will be shown on screen. You can press “e” to go back to the main screen to select a different instruction, or press “r” to replay the same instruction.
+Once familiar with the processes and tools of hardware design, it was time to develop a local oscillator and user interface for the SDR. The project was divided into three major milestones named M1, M2, and M3 as shown in the figure below.
 
-## SimProcLator Flowchart and Block Diagram
+![img](v2timeline.png "Figure 5: M1 in blue, M2 in gold, and M3 in green. An overall Waterfall approach with Agile sprints within each discrete box (e.g., prototyping, developing schematic, layout etc.).")
 
-![img](flowchartv2.png "Program flowchart for SimProcLator")
+During the first phase of the project, our team used the Interface Control Document (ICD) and design requirements to research and order components. For our subsystem, we narrowed it down to 5 critical components we would need in order to have a fully functioning subsystem. We would need:
+* a microprocessor (ATMega 328PB) to interface all components of the radio synchronously.
+* a clock generator (AdaFruit SI5351) to create two waves that are 90 degrees out-of-phase with each other.
+* single pole double throw switches to toggle between four total modes: [1] allowing users to make changes on board  [2] through a computer connection, as well as allowing the user to toggle between [3] transmitting mode (TX), and [4] receiving mode (RX).
+* a knob to allow the user to variably change the frequency of our waves. 
+* an LCD (16x2 LCD) to communicate the current status of the radio.
 
-To understand how SimProcLator simulates the step-by-step execution of instructions, the above flowchart is quite handy. I named them to be rather self-explanatory, but for sake of completeness, here we go:
-* Mainscreen: Welcome screen that lets user choose instruction to be executed by pressing one of `a`, `s`, and `o`.
-* `add`/`sub` instruction: Input screen for the add/sub instructions. Lets the user pick registers Ra and Rb (one of R0 to R3).
-* `ori` instruction: Input screen for the ori instruction. Closely tied with the ori encoded screen since this instruction requires an imm5 constant (SimProcLator needs to show the encoded instruction to let the user input the desired imm5 constant).
-* `add`/`sub`/`ori` encoded: Shows how the assembly language instruction is encoded into binary before being placed into memory.
-* Processor (base): SimProcLator draws the base processor screen. 
-* Processor (cycle-by-cycle): Depending on the instruction the user selected, SimProcLator will "animate" the execution by highlighting in green the signals required during each clock cycle of instruction execution. It also highlights the important digital logic blocks in blue and red.
-* Pause state: Halts the simulation when spacebar is pressed and resumes simulation when pressed again.
-* Execution Complete: Indicates to the user that SimProcLator has simulated the execution of the instruction and allows either replay of the same instruction or return to Mainscreen.
+During this process, our team delivered our first oral presentation (called OP1). OP1’s objective was to describe our subsystem to our communication instructor (acting as a product manager in industry) and persuade the audience how our project was on track. The presentation went very well, and the communication professor took slides from our deck as good examples during his lecture!
 
-The flowchart describes the way SimProcLator operates in terms of program flow and control. To better understand how SimProcLator does this under the hood, let's take a look at the block diagram below. 
+### PCB Schematic and Layout
 
-![img](blockdiagram.png "A rather colourful block diagram for SimProcLator")
+Once we validated our schematic with our TA and passed the electrical rule on Altium, the next step was to create the PCB and layout the components. A few components didn’t come with footprints, but fortunately those were on breakout boards that we planned to mount to our subsystem C board with headers. We simply created pads/vias for the headers instead of the actual components. The figures below show the final schematic and layouts:
 
-We see four groups: the **Input Group**, the **Interrupt Service Routines (ISR) Group**, the **Main Program Group**, and the **Output Group**. It makes the most sense to describe the diagram by going through these four groups, but you can also appreciate the colour-coded blocks of purple, green, red, and blue. These will be mentioned at the end. 
+![img](m2_schematic.png "Figure 6: Our final M2 schematic showing the MCU, LCD, and various controls and indicators.")
 
-The easiest two groups are the **Input Group** (top left) and the **Output Group** (right) because their names are self-explanatory. The only way SimProcLator accepts user input is through a keyboard, but there are quite a lot of output devices. SimProcLator makes use of a VGA module to display content on a monitor and uses an audio module to output sound through speakers. The monitor and speaker are connected to the DE1-SoC. The other two output devices—the LEDs and HEX displays—are used as testing/debugging aids and are already part of the DE1-SoC. 
+![img](layout.png "Figure 7: Our Altium layout and routing.")
 
-The next group we look at is the **Interrupt Service Routine (ISR) Group**. Again, the name is self-evident; this group is the system's interrupt service handler. To make the system as responsive as possible in terms of keyboard input and timer output, we decided to use interrupt-based I/O synchronization instead of polling. 
+![img](3d.png "Figure 8: A 3D view using Altium’s rendering with a few components like the knob, toggles, and test points.")
 
-A person pressing a key would trigger the keyboard ISR, within which a *keyboard input parser* would analyze the make/break codes to determine what letter was pressed and what the system should do (based on its current state). In certain states, such as *`ori` encoded* or *Processor (cycle-by-cycle)*, animating the instruction execution simulation (that's a mouthful) makes use of a 1.5 second timer. This means that every 1.5 seconds, the internal timer on the FPGA triggers an interrupt, within which our one of two massive finite state machine (FSM) checks the current program state and determines what to animate. 
+### Firmware
 
-This could have been done with polling, but with the size and complexity of the program, we decided to implement interrupts (which took more work, was more worth it in terms of end result—our system was a lot more responsive).
+With the PCB validated and the design rule check passed, we ordered our PCB. While it shipped, our team focused on refining the firmware and making sure all parts worked as expected on the breadboard (Figure 9). 
 
-The largest group is, evidently, the **Main Program Group**, and it contains our other giant FSM. Looking at the middle of our block diagram above, we see three distinct colours: green, red, and blue. The green modules features the various "plotters" in our program, and their purpose are self-evident (i.e., shape plotter plots a shape—used for printing the processor etc.). The red modules feature the background screens at various stages of the program (i.e., mainscreen, add screen, end screen etc.). The blue modules control and write/draw on top of the red module screens. 
+![img](testing.jpg "Figure 9: Testing the MCU, LCD, PLL, LED, and knob on the breadboard while the PCB arrived.")
 
-Everything above (this entire section, in fact), is rather a bit technical and in-depth, so don't worry if a lot of it doesn't make sense. I've written it out for anyone interested in some inner-workings and overall architecture of SimProcLator. 
+To write the software for our subsystem, we used MPLAB X IDE with AVR programming and flashed code through JTAG onto the microcontroller. All components of our project were interfaced through interrupts to ensure the fastest possible changes for users. To change frequencies on our board, we programmed our knob in a way so that for coarse frequency changes, the user can press into the knob and then turn. For fine changes in frequency the user can rotate the knob normally. Finally, we showed all these changes on our 8-bit parallel port 16x2 LCD.
 
-## Final Work Distribution
+### Soldering, Assembly, and Testing
 
-My partner for this project was Uzair Nadeem, who was also my partner for ECE241. It was such a wonderful experience working with him because he is very reliable, trustworthy, and always finds a way to get the job done in the most excellent way possible. Also similar to ECE241, we worked together very closely on this project. However, we each worked more on certain parts of the project than others, so the table below shows roughly what each person worked on/was responsible for. 
+Once the PCB arrived, we got to work soldering as per Figure 10. Most of the components were straightforward, but a few of the larger ones like the toggles and the closely fitted headers and filter capacitors were a bit tricky. Fortunately, everything went well and the final assembled subsystem looks like Figure 11.
 
-| Zaeem Ahmad                                     | Uzair Nadeem                                           |
-| ----------------------------------------------- | ------------------------------------------------------ |
-| Interrupts for PS/2 Keyboard and Interval Timer | VGA output (display)                                   |
-| Audio sample conversion and output              | ori instruction execution (timer ISR)                  |
-| Overall finite state machine                    | Designing all screens (mainscreen, input screens etc.) |
-| add and sub instruction execution (timer ISR)   | Plotting the processor and wires                       |
-| add, sub, and ori instruction input + encoding  | Animating the clock signal                             |
+![img](subsystemc.jpg "Figure 10: The PCB after it arrived. Picture taken at MyFab just before we started soldering components.")
+
+![img](assembled.png "Figure 11: Our final assembled subsystem with parts labelled.")
+
+The final phase of the project was to perform unit testing before being eligible for full system integration. To have a fully functioning Subsystem C we had to be able to toggle frequencies through our UI from 3MHz to 30MHz, toggle between TX and RX mode, and display the current status of everything to the user. During this phase, our Subsystem C successfully demonstrated all intended functionalities in front of the TA. We were able to toggle frequencies through our UI from 3 MHz to 30 MHz, switch between TX and RX modes, and display the current status of all components. 
+
+One minor caveat in our design was a slight delay when updating the PLL frequency from the knob to the PLL.This was due to the fact that the PLL modules input parameters were updated through polling even though the input from the knob was done through interrupts. However, this delay was barely noticeable to the naked eye.
+
+During system integration, our board continued to perform flawlessly. All components such as the LEDs, toggles, TX/RX mode switching, and interactions between computer and hardware mode toggling worked as expected. Due to the small timing delay when updating the frequency on our board, the output frequencies generated (which were sent to the other subsystems) experienced a slight lag during integration day. Other than this minor issue, the integration was a success.
+
+
+## What We Learned
+
+This design course was a near constant grind, especially in combination with a full semester of other heavy courses. With that said, this project gave us a real taste of the hardware design process and what it’s like to be a real engineer. In real life, you won’t have a handbook to solve every problem. To be an engineer is to expect problem after problem and keep developing solutions to fix those problems. You design, build, test, and repeat. 
+
+The course name is rather accurate as we gained an understanding of both the technical aspect of hardware design and also the communication (or “soft skill”) aspect. 
+
+On the engineering design side of things, we interpreted Subsystem C’s requirements and specifications from the ICD and developed our own design to achieve those specifications and requirements. We gained proficiency using computer aided (CAD) and electronic design automation (EDA) techniques for hardware development through Altium Designer, our choice of schematic capture and printed circuit board layout tool. 
+
+From a physical perspective, we demonstrated our ability to solder through-hole and surface-mount components. We gained confidence using electronic lab instruments for testing circuits, using results to demonstrate functionality or troubleshoot issues.  
+
+Throughout all of the above, this project was an opportunity to work in a team environment while developing a complex hardware system. We applied a unique project management approach for this type of hardware development, with an overall waterfall scheme with smaller sprints in each phase of the project (refer to Figure 5). 
+
+Most importantly, we learned to confidently prepare and deliver oral presentations to both a technical (our TAs) and non-technical (our communication instructors) audience to report on project progress and demonstrate subsystem functionality. For the technical audience in particular, we learned how to write a project proposal, blueprints, schematic documents, and test plans to document, demonstrate, and verify our design for functionality and compliance. 
+
+Overall, this course was an incredible journey that transformed challenges into skills and prepared us to shape the future. It taught us that as engineers we don’t wait for solutions. We build them.
