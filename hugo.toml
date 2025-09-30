@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'Zaeem Ahmad'
 theme = 'typo'
 
+googleAnalytics = "G-82JFCVKC6G"
+
 # for github pages
 [caches]
   [caches.images]
@@ -81,9 +83,9 @@ url = "/notes"
 name = "about"
 url = "/about"
 
-[[params.menu]]
-name = "resume"
-url = "/resume"
+# [[params.menu]]
+# name = "resume"
+# url = "/resume"
 
 # [[params.menu]]
 # name = "tags"
