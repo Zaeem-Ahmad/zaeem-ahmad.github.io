@@ -90,7 +90,7 @@ Everything above (this entire section, in fact), is rather a bit technical and i
 
 ## Final Work Distribution
 
-My partner for this project was Uzair Nadeem, who was also my partner for ECE241. It was such a wonderful experience working with him because he is very reliable, trustworthy, and always finds a way to get the job done in the most excellent way possible. Also similar to ECE241, we worked together very closely on this project. However, we each worked more on certain parts of the project than others, so the table below shows roughly what each person worked on/was responsible for. 
+My partner for this project was Uzair Nadeem, who was also my partner for ECE241. It was such a wonderful experience working with him because he is very reliable, trustworthy, and always finds a way to get the job done in the most excellent way possible. Also similar to ECE241, we worked together very closely on this project. However, we each worked more on certain parts of the project than others, so the table below shows roughly what each person worked on/was responsible for. Bonus: our course instructor, Professor Jonathan Rose, recorded a quick demo of our project, which you can view on [YouTube at this link](https://youtu.be/7R0thylkvb4).
 
 | Zaeem Ahmad                                     | Uzair Nadeem                                           |
 | ----------------------------------------------- | ------------------------------------------------------ |
