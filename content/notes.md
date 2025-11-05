@@ -5,7 +5,7 @@ hideBackToTop: false
 hidePagination: true
 ---
 
-These are my university notes, which I've organized in reverse chronological order (i.e., starting from the most recent semester, so scrolling down means older/lower years). 
+This page contains my university notes, cheatsheets, and course summaries. I've organized these in reverse chronological order (i.e., starting from the most recent semester, so scrolling down means older/lower years). The first section contains all the cheatsheets/summaries for quick access, and later sections contain full course notes.
 
 FYI, I didn't take notes for the following courses:
 * APS100 - Orientation to Engineering
@@ -13,8 +13,40 @@ FYI, I didn't take notes for the following courses:
 * APS112 - Engineering Strategies and Practice 2
 * ECE201 - ECE Seminar
 * ECE212 - Circuit Analysis
+---
+### Cheatsheets and Course Summaries
 
-### Second Year Winter
+**Second Year:** \
+[ECE231 Final Cheatsheet](/zaeem_ece231_final_cheatsheet.pdf)
+
+[ECE212 Final Cheatsheet](/zaeem_ece212_final_cheatsheet.pdf)
+
+[ECE221 Maxwell's Equations](/zaeem_ece221_maxwell_eqs.pdf)
+
+[ECE216 Course Concepts (High Level)](/zaeem_ece216_course_summary.pdf)
+
+[ECE212 Course Summary](/zaeem_mat291_summary_partial.pdf)
+
+TO BE ADDED: ECE243 Midterm, Simple Processor, and Cache Summary
+
+To BE ADDED: MAT290 Course Formulae
+
+**First Year:** \
+[ECE110 Final Cheatsheet](/zaeem_ece110_final_cheatsheet.pdf)
+
+[MIE100 Final Cheatsheet](/zaeem_mie100_final_cheatsheet.pdf)
+
+[MAT187 Course Summary](/zaeem_mat187_course_summary.pdf)
+
+[MAT188 Course Summary](/zaeem_mat188_essential_concepts.pdf)
+
+[APS110 Exam Jam (Course Speedrun)](/zaeem_aps110_exam_jam.pdf)
+
+[APS105 Exam Jam (String Functions)](/zaeem_aps105_string_funcs.pdf)
+
+---
+
+### Second Year Winter Notes
 
 [ECE216 - Signals and Systems](/zaeem_ece216.pdf)
 
@@ -25,7 +57,7 @@ FYI, I didn't take notes for the following courses:
 [ECE295 - Hardware Design and Communication](https://zaeemahmad.notion.site/ECE295-Lecture-2277acf62de780f1ba2afbf49a765cd4) \
 Lectures twice a week, contains only what I took pictures of
 
-### Second Year Fall 
+### Second Year Fall Notes
 
 [ECE231 - Introductory Electronics](/zaeem_ece231.pdf)
 
@@ -37,7 +69,7 @@ Lectures twice a week, contains only what I took pictures of
 
 [MAT291 - Introduction to Mathematical Physics](/zaeem_mat291.pdf)
 
-### First Year Winter
+### First Year Winter Notes
 
 [APS105 - Computer Fundamentals](zaeem_aps105_collection.pdf) \
 Lecture 2, some lectures from week 8-9, and some function summaries
@@ -50,7 +82,7 @@ Contains a few blank examples from Prof. Mojahedi's notes
 [MIE100 - Dynamics](/zaeem_mie100.pdf) \
 No notes for last few lectures as I switched profs
 
-### First Year Fall
+### First Year Fall Notes
 
 [APS110 - Engineering Chemistry and Materials Science](/zaeem_aps110.pdf)
 
