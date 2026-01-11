@@ -25,9 +25,12 @@ hideHeader = false
 # Intro on main page, content in markdown
 homeIntroTitle = 'Welcome!'
 homeIntroContent = """
-My name is Zaeem, and I study electrical engineering at the University of Toronto. This is my personal website where I like to write about the [projects](/projects) I'm involved in and share my [engineering notes](/notes). Feel free to [read about myself](/about) or check out my [résumé](/resume).
+My name is Zaeem, and I study electrical engineering at the University of Toronto. This is my personal website where I like to write about the [projects](/projects) I'm involved in. Feel free to [read about myself](/about) or check out my [engineering notes](/notes) and [cheat sheets](/cheatsheets).
 
 ### News
+
+**Jun 27, 2025:** Switched the site architecture from Jekyll to HUGO.
+
 **Dec 30, 2024:** Uploaded FPGA project from ECE241.
 
 **Sep 03, 2024:** First day of second year. Uploaded KrossKut info to wrap up the summer.
@@ -78,6 +81,10 @@ url = "/projects"
 [[params.menu]]
 name = "notes"
 url = "/notes"
+
+[[params.menu]]
+name = "cheatsheets"
+url = "/cheatsheets"
 
 [[params.menu]]
 name = "about"
