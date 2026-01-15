@@ -8,7 +8,18 @@ hidePagination: true
 This page contains cheat sheets and course summaries for many of the courses that I've taken. I've decided to split this into a separate page from the course notes because the number of cheat sheets and summaries is growing.
 
 ---
-**Second Year:** \
+
+### Third Year
+
+[ECE302 Final Cheatsheet](zaeem_ece302_final_cheatsheet.pdf) (Blank portions for you to write whatever you wish)
+
+[ECE311 Midterm 1 and 2 Cheatsheet](/zaeem_ece311_midterm12_cheatsheet.pdf) (Pg.1 Midterm 1, Pg.2 Midterm 2) \
+[ECE311 Final Cheatsheet](/zaeem_ece311_final_cheatsheet.pdf) (second page not the best designed)
+
+[CIV300 Final Cheatsheet](/zaeem_civ300_final_cheatsheet.pdf)
+
+### Second Year
+
 [ECE231 Final Cheatsheet](/zaeem_ece231_final_cheatsheet.pdf)
 
 [ECE212 Final Cheatsheet](/zaeem_ece212_final_cheatsheet.pdf)
@@ -23,7 +34,8 @@ TO BE ADDED: ECE243 Midterm, Simple Processor, and Cache Summary
 
 To BE ADDED: MAT290 Course Formulae
 
-**First Year:** \
+### First Year
+
 [ECE110 Final Cheatsheet](/zaeem_ece110_final_cheatsheet.pdf)
 
 [MIE100 Final Cheatsheet](/zaeem_mie100_final_cheatsheet.pdf)
