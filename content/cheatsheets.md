@@ -11,6 +11,11 @@ This page contains cheat sheets and course summaries for many of the courses tha
 
 ### Third Year
 
+[ECE334 Final Cheatsheet](zaeem_ece334_final_cheatsheet.pdf)
+
+[ECE314 Midterm 1 and 2 Cheatsheet](/zaeem_ece314_midterm12_cheatsheet.pdf) (Pg.1 Midterm 1, Pg.2 Midterm 2) \
+[ECE314 Final Cheatsheet](/zaeem_ece314_final_cheatsheet.pdf) (second page not the best quality scan)
+
 [ECE302 Final Cheatsheet](zaeem_ece302_final_cheatsheet.pdf) (Blank portions for you to write whatever you wish)
 
 [ECE311 Midterm 1 and 2 Cheatsheet](/zaeem_ece311_midterm12_cheatsheet.pdf) (Pg.1 Midterm 1, Pg.2 Midterm 2) \
@@ -20,15 +25,15 @@ This page contains cheat sheets and course summaries for many of the courses tha
 
 ### Second Year
 
-[ECE231 Final Cheatsheet](/zaeem_ece231_final_cheatsheet.pdf)
-
 [ECE212 Final Cheatsheet](/zaeem_ece212_final_cheatsheet.pdf)
+
+[ECE212 Course Summary](/zaeem_mat291_summary_partial.pdf)
 
 [ECE221 Maxwell's Equations](/zaeem_ece221_maxwell_eqs.pdf)
 
 [ECE216 Course Concepts (High Level)](/zaeem_ece216_course_summary.pdf)
 
-[ECE212 Course Summary](/zaeem_mat291_summary_partial.pdf)
+[ECE231 Final Cheatsheet](/zaeem_ece231_final_cheatsheet.pdf)
 
 TO BE ADDED: ECE243 Midterm, Simple Processor, and Cache Summary
 
