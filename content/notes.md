@@ -14,7 +14,13 @@ FYI, I didn't take notes for the following courses:
 * ECE201 - ECE Seminar
 * ECE212 - Circuit Analysis
 ---
+### Third Year Winter Notes
+
+[ECE334 - Digital Electronics](/zaeem_ece334.pdf)
+
 ### Third Year Fall Notes
+
+[ECE302 - Probability and Applications](/zaeem_ece302.pdf)
 
 [ECE311 - Introduction to Control Systems](/zaeem_ece311.pdf)
 
