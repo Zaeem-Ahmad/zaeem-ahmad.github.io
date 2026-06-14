@@ -18,11 +18,15 @@ FYI, I didn't take notes for the following courses:
 
 [ECE334 - Digital Electronics](/zaeem_ece334.pdf)
 
+[ECE472 - Engineering Economic Analysis & Entrepreneurship](/zaeem_ece472.pdf)
+
 ### Third Year Fall Notes
 
 [ECE302 - Probability and Applications](/zaeem_ece302.pdf)
 
 [ECE311 - Introduction to Control Systems](/zaeem_ece311.pdf)
+
+[ECE314 - Fundamentals of Electrical Energy Systems](/zaeem_ece314.pdf)
 
 [ECE344 - Operating Systems](/zaeem_ece344.pdf)
 
