@@ -20,7 +20,7 @@ This page contains cheat sheets and course summaries for many of the courses tha
 [ECE314 Midterm 1 and 2 Cheatsheet](/zaeem_ece314_midterm12_cheatsheet.pdf) (Pg.1 Midterm 1, Pg.2 Midterm 2) \
 [ECE314 Final Cheatsheet](/zaeem_ece314_final_cheatsheet.pdf) (second page not the best quality scan)
 
-[ECE302 Final Cheatsheet](zaeem_ece302_final_cheatsheet.pdf) (Blank portions for you to write whatever you wish)
+[ECE302 Final Cheatsheet](/zaeem_ece302_final_cheatsheet.pdf) (Blank portions for you to write whatever you wish)
 
 [ECE311 Midterm 1 and 2 Cheatsheet](/zaeem_ece311_midterm12_cheatsheet.pdf) (Pg.1 Midterm 1, Pg.2 Midterm 2) \
 [ECE311 Final Cheatsheet](/zaeem_ece311_final_cheatsheet.pdf) (second page not the best designed)
