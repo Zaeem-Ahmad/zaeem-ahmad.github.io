@@ -11,6 +11,8 @@ This page contains cheat sheets and course summaries for many of the courses tha
 
 ### Third Year
 
+[ECE472 Basic Formulae](/zaeem_ece472_formula_basic.pdf)
+
 [ECE334 Final Cheatsheet](/zaeem_ece334_final_cheatsheet.pdf)
 
 [ECE361 Course Summary](/zaeem_ece361_course_summary.pdf)
